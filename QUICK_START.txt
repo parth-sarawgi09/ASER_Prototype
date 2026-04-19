@@ -1,0 +1,166 @@
+# EduTrack AI — Quick Start Cheat Sheet
+
+## ⚡ Fastest Way to Deploy (5 minutes)
+
+### STEP 1: Get the files
+Download all files from the outputs folder
+
+### STEP 2: Create GitHub repo
+```bash
+# In terminal, create a folder
+mkdir edutrack-ai
+cd edutrack-ai
+
+# Initialize git
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+### STEP 3: Push to GitHub
+```bash
+# Create repo on github.com first
+# Then run:
+git remote add origin https://github.com/YOUR_USERNAME/edutrack-ai.git
+git branch -M main
+git push -u origin main
+```
+
+### STEP 4: Deploy to Vercel
+1. Go to vercel.com
+2. Click "New Project"
+3. Import your GitHub repo
+4. Click "Deploy"
+5. **Done!** Get live URL instantly
+
+---
+
+## 🖥️ Run Locally (for testing)
+
+```bash
+# 1. Install Node (if needed)
+# Download from nodejs.org
+
+# 2. Install dependencies
+npm install
+
+# 3. Start dev server
+npm run dev
+
+# 4. Opens at http://localhost:5173
+```
+
+---
+
+## 📦 File Structure (Copy This)
+
+```
+edutrack-ai/
+├── package.json          ← Dependencies list
+├── vite.config.js        ← Vite config
+├── index.html            ← HTML entry
+├── main.jsx              ← React entry
+├── index.css             ← Styling
+└── App.jsx               ← Main component (rename from edutrack-ai-prototype.jsx)
+```
+
+---
+
+## 🎯 What Each File Does
+
+| File | Purpose |
+|------|---------|
+| `package.json` | Lists all npm packages needed |
+| `vite.config.js` | Vite build configuration |
+| `index.html` | HTML page that loads React |
+| `main.jsx` | Entry point for React |
+| `App.jsx` | Your actual dashboard component |
+| `index.css` | Global styles |
+
+---
+
+## ✅ Before Interview
+
+- [ ] Can run locally: `npm run dev`
+- [ ] Can access at http://localhost:5173
+- [ ] All filters work (state, grade, year)
+- [ ] Risk colors display correctly
+- [ ] No console errors
+- [ ] Deployed live (Vercel or similar)
+- [ ] Have shareable URL ready
+
+---
+
+## 🚀 Show This in Interview
+
+**Send them this link:**
+```
+https://your-vercel-url.vercel.app
+```
+
+**They click it and see:**
+- Live dashboard
+- Working filters
+- Real interactions
+- Professional UI
+
+**You explain:**
+*"This is a React dashboard where DEOs can filter by state/grade/year and get real-time insights. The component uses React hooks for state management, and the risk assessment changes color based on performance levels."*
+
+---
+
+## 🆘 Troubleshooting
+
+### `npm: command not found`
+→ Install Node.js from nodejs.org
+
+### `Module not found: lucide-react`
+→ Run: `npm install lucide-react`
+
+### Port 5173 in use
+→ Run: `npm run dev -- --port 3000`
+
+### Vercel build fails
+→ Check `package.json` has lucide-react in dependencies
+
+### Styling broken
+→ All styling is inline, should work. Check browser console.
+
+---
+
+## 💡 Pro Tips
+
+1. **Rename file**: Change `edutrack-ai-prototype.jsx` to `App.jsx`
+
+2. **Don't use TypeScript** for this (simpler)
+
+3. **Keep data hardcoded** (you did, so you're good)
+
+4. **Test on mobile** to show responsive design
+
+5. **Have internet during demo** in case they want to see live
+
+---
+
+## 📞 Emergency Checklist
+
+If something breaks right before interview:
+
+✅ Clear npm cache: `npm cache clean --force`
+✅ Delete node_modules: `rm -rf node_modules`
+✅ Reinstall: `npm install`
+✅ Restart: `npm run dev`
+
+---
+
+## 🎬 Interview Script
+
+**"Walk us through your code"**
+
+*"I built a React component with hooks for state management. When you select a state, it filters the ASER dataset and shows reading/arithmetic metrics. The risk assessment function automatically color-codes performance — red for critical, yellow for caution, green for good.*
+
+*The AI insight engine checks if math is critical, if there's a grade drop, and generates contextual recommendations. Instead of static dashboards, this gives DEOs a decision-making tool that highlights problems automatically."*
+
+---
+
+Ready? 🚀 Deploy it!
